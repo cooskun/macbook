@@ -10,14 +10,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $blue-light;
-  background-image: linear-gradient(135deg, $blue-light 0%, $purple 100%);
 }
 
 /* Macbook Body */
 .macbook__body {
   display: grid;
-  grid-gap: 10px 5px;
+  grid-gap: 7.5px 4px;
   grid-template-rows: auto;
   grid-template-columns: $speaker-width $keyboard-width--outer $speaker-width;
   grid-template-areas: "left-speaker keyboard right-speaker" ". touchpad .";  
@@ -27,7 +25,7 @@
   padding-top: $macbook-padding--top;
   padding-bottom: $macbook-padding--bottom;
   position: relative;  
-  border-radius: 22px;
+  border-radius: 16px;
   background-color: $silver;
 
   &__snick {
@@ -67,7 +65,7 @@
   width: $keyboard-width--outer;
   padding: $keyboard-padding;
   overflow: hidden;  
-  border-radius: 8px;  
+  border-radius: 4px;  
   background-color: $silver;
   @extend %inset-shadow;
 }
@@ -78,16 +76,16 @@
   justify-content: space-between;
   align-items: center;
   width: $keyboard-width--inner;
-  padding: 7px 32px;
+  padding: 5px 24px;
   background-color: $black;
-  border-radius: 4px;  
+  border-radius: 3px;  
 }
 
 /* Touchbar Key Group */
 .touchbar__key-group {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-column-gap: 5px;
+  grid-column-gap: 3px;
   position: relative;
   z-index: 1;
 
@@ -109,6 +107,7 @@
   border-radius: $key-radius;
   color: $white;
   background-color: $gray-darker;
+  font-size: $font-size--sm;
 
   .touchbar__key-group--functions & {
     border-radius: 0;
@@ -125,11 +124,11 @@
   }
 
   &--esc {
-    margin-right: 5px;
+    margin-right: 3px;    
   }
 
   &--left {
-    width: 10px;
+    width: 7.5px;
   }
 
   &__icon {
@@ -148,15 +147,14 @@
 /* Touchbar Frame Group */
 .touchbar__frame-group {
   display: grid;
-  grid-template-columns: repeat(36, minmax(9px, 36px));
-  grid-column-gap: 1px;  
-  box-shadow: inset 6px 0 $black;
+  grid-template-columns: repeat(36, $touchbar-frame-width);
+  grid-column-gap: 1px; 
   position: relative; 
 
   &::before,
   &::after {
     content: "";
-    width: 30px;
+    width: 22.5px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -232,7 +230,7 @@
   align-items: center;
   width: $key-size--default;
   height: $key-size--default;
-  padding: 8px;
+  padding: 4px;
   border: 0;
   border-radius: $key-radius;
   color: $white;
@@ -383,8 +381,8 @@
   &.has-light {
     &::before {
       content: "";
-      width: 4px;
-      height: 4px;
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
       background-color: $white;
     }
@@ -411,28 +409,28 @@
   max-width: 100%;
   
   &--command {
-    width: 10px;
-    height: 10px;
+    width: 7.5px;
+    height: 7.5px;
   }
   &--control {
-    width: 11px;
-    height: 8px;
+    width: 8.25px;
+    height: 6px;
   }
   &--enter {
-    width: 20px;
-    height: 14px;
+    width: 15px;
+    height: 10.5px;
   }
   &--backspace {
-    width: 21px; 
-    height: 15px;
+    width: 15.75px; 
+    height: 11.25px;
   }
   &--tab {
-    width: 27px;
-    height: 15px;
+    width: 20.25px;
+    height: 11.25px;
   }
   &--shift {
-    width: 18px;
-    height: 15px;
+    width: 13.5px;
+    height: 11.25px;
   }
 }
 
@@ -442,7 +440,7 @@
   justify-self: center;
   width: $touchpad-width;
   height: $touchpad-height;
-  border-radius: 6px;
+  border-radius: 5px;
   background-color: $silver;    
   @extend %inset-shadow;
 }
