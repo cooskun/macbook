@@ -334,6 +334,10 @@
   /* Arrow */
   &--arrow {
     height: $key-size--half;
+
+    &--down {
+      transform: rotate(180deg);
+    }
   }  
 
   /* Shift */
