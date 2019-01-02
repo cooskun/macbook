@@ -45,7 +45,7 @@
   width: $speaker-width;
   height: $speaker-height;
   align-self: center;
-  background: url(dot.svg) repeat;
+  background: $speaker-mesh-svg repeat;
   background-size: $speaker-mesh-size;
 
   &--left {
@@ -333,10 +333,26 @@
 
   /* Arrow */
   &--arrow {
-    height: $key-size--half;
-
+    &--down, &--up {
+      height: $key-size--half;  
+    }
+    
     &--down {
-      transform: rotate(180deg);
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    
+    &--left {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+    
+    &--right {
+      svg {
+        transform: rotate(90deg);
+      }
     }
   }  
 
@@ -412,29 +428,43 @@
   fill: $white;
   max-width: 100%;
   
-  &--command {
+  // Parent based state
+  .keyboard__key--command & {
     width: 7.5px;
     height: 7.5px;
   }
-  &--control {
+  .keyboard__key--control & {
     width: 8.25px;
     height: 6px;
   }
-  &--enter {
+  .keyboard__key--enter & {
     width: 15px;
     height: 10.5px;
   }
-  &--backspace {
+  .keyboard__key--backspace & {
     width: 15.75px; 
     height: 11.25px;
   }
-  &--tab {
+  .keyboard__key--tab & {
     width: 20.25px;
     height: 11.25px;
   }
-  &--shift {
+  .keyboard__key--shift & {
     width: 13.5px;
     height: 11.25px;
+  }
+  .keyboard__key--arrow & {
+    width: 7.5px;
+    height: 7.5px;
+  }
+  .keyboard__key--arrow--down & {
+    transform: rotate(180deg);
+  }
+  .keyboard__key--arrow--left & {
+    transform: rotate(-90deg);
+  }
+  .keyboard__key--arrow--right & {
+    transform: rotate(90deg);
   }
 }
 
