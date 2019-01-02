@@ -1,9 +1,9 @@
 %inset-shadow {
-  box-shadow: inset 1px 1px $gray, inset -1px -1px $gray;
+  box-shadow: inset .5px .5px $gray, inset -0.5px -0.5px $gray;
 }
 
 %key-shadow {
-  box-shadow: 0 2px $gray;
+  box-shadow: 0 1px $gray;
 }
 
 %key-animation-setup {
@@ -14,12 +14,12 @@
 }
 
 %key-animation {    
-  transform: translate(0px, 1px);
-  box-shadow: 0px 1px $gray;
+  transform: translate(0px, .5px);
+  box-shadow: 0px .5px $gray;
 }
 
 %key-animation--enter { 
-  box-shadow: 0px 1px $gray;  
+  box-shadow: 0px .5px $gray;  
   outline: none;
 }
 
@@ -33,7 +33,7 @@
 
 %touchbar-frame-animation {
   transform: scale(1.2);
-  border: 1px solid $white;
-  border-radius: 2px;
+  border: .5px solid $white;
+  border-radius: 1px;
   z-index: 1;
 }
